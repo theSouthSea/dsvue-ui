@@ -1,0 +1,10 @@
+import{_ as s,o as n,c as a,a as e}from"./app-h3sDyrcR.js";const t={},o=e(`<h1 id="快速开始" tabindex="-1"><a class="header-anchor" href="#快速开始" aria-hidden="true">#</a> 快速开始</h1><blockquote><p>在 main.js 中引入组件库</p></blockquote><div class="language-javascript line-numbers-mode" data-ext="js"><pre class="language-javascript"><code><span class="token comment">// 全部引入</span>
+<span class="token keyword">import</span> <span class="token string">&#39;dsvue-ui/dist/css/index.css&#39;</span>
+<span class="token keyword">import</span> <span class="token constant">MUI</span> <span class="token keyword">from</span> <span class="token string">&quot;dsvue-ui&quot;</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token constant">MUI</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 按需引入</span>
+<span class="token keyword">import</span> <span class="token string">&#39;dsvue-ui/dist/css/demo.css&#39;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Demo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;dsvue-ui&quot;</span><span class="token punctuation">;</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Demo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Copyright (c) 2021-present zack</p>`,4),c=[o];function p(i,l){return n(),a("div",null,c)}const d=s(t,[["render",p],["__file","index.html.vue"]]);export{d as default};
