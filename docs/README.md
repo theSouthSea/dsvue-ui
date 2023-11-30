@@ -4,13 +4,13 @@
 
 ```javascript
 // 全部引入
-import 'mooc-ui/dist/css/index.css'
-import MUI from "mooc-ui";
+import 'dsvue-ui/dist/css/index.css'
+import MUI from "dsvue-ui";
 Vue.use(MUI);
 
 // 按需引入
-import 'mooc-ui/dist/css/demo.css'
-import { Demo } from "mooc-ui";
+import 'dsvue-ui/dist/css/demo.css'
+import { Demo } from "dsvue-ui";
 Vue.use(Demo);
 ```
 

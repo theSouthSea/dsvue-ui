@@ -5,9 +5,9 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 const __dirname = getDirname(import.meta.url)
 // module.exports = {
 export default {
-  title: 'Mooc-UI',
+  title: 'dsvue-ui',
   description: 'Just playing around',
-  base: "/moocUI/",
+  base: "/dsvue-ui/",
   theme: defaultTheme({
     navbar: [
       { text: 'Home', link: '/' },
