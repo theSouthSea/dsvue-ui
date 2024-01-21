@@ -28,7 +28,10 @@
   },
   "lint-staged": {
     "components/**/*": "prettier --write --ignore-unknown",
-    "src/**/*": "prettier --write --ignore-unknown"
+    "src/**/*": "prettier --write --ignore-unknown",
+    "*.{vue, js, ts}": [
+      "eslint --quiet --fix"
+    ]
   },
   "dependencies": {
     "@vuepress/client": "2.0.0-rc.0",

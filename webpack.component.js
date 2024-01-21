@@ -1,7 +1,7 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');// 清理文件夹
-const { VueLoaderPlugin } = require('vue-loader')
-const glob = require("glob");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 清理文件夹
+const { VueLoaderPlugin } = require('vue-loader');
+const glob = require('glob');
 
 const list = {};
 
@@ -24,10 +24,7 @@ module.exports = {
     library: 'mui',
     libraryTarget: 'umd'
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new VueLoaderPlugin()
-  ],
+  plugins: [new CleanWebpackPlugin(), new VueLoaderPlugin()],
   // resolve: {
   //   symlinks: false,
   //   alias: {
@@ -41,10 +38,10 @@ module.exports = {
         test: /\.vue$/,
         use: [
           {
-            loader: 'vue-loader',
+            loader: 'vue-loader'
           }
         ]
       }
     ]
-  },
+  }
 };

@@ -5,7 +5,7 @@ module.exports = {
   semi: true,
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
-  trailingComma: 'none',
+  trailingComma: 'es5',
   bracketSpacing: true,
   bracketSameLine: false,
   // 重点是这一个要配置为auto
