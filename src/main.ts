@@ -5,4 +5,5 @@ const obj = {
   abc: 'abc',
   bb: 123,
 };
+console.log('obj', obj);
 createApp(App).mount('#app');
