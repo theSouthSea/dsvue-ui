@@ -1,15 +1,9 @@
 <template>
   <div id="app">
-    <Demo/>
-    <m-card
-      imgSrc="java.png"
-      summary="剑指Java面试-Offer直通车  百度资深面试官授课" 
-    />
-    <br>
-    <m-card
-      imgSrc="c.png"
-      summary="C语言系统化精讲  重塑你的编程思想 打造坚实的开发基础" 
-    >
+    <Demo />
+    <m-card imgSrc="java.png" summary="剑指Java面试-Offer直通车  百度资深面试官授课" />
+    <br />
+    <m-card imgSrc="c.png" summary="C语言系统化精讲  重塑你的编程思想 打造坚实的开发基础">
       <template v-slot:footer>
         <div class="footer">
           <div class="level">中级 · 528人报名</div>
@@ -17,12 +11,8 @@
         </div>
       </template>
     </m-card>
-    <br>
-    <m-card
-      imgSrc="spring.png"
-      :width="370"
-      :imgHeight="90"
-    >
+    <br />
+    <m-card imgSrc="spring.png" :width="370" :imgHeight="90">
       本路线旨在帮助想快速掌握SpringBoot应用的工程师，全方位多角度带你升级。
       <template v-slot:footer>
         <div class="footer-spring">
@@ -35,10 +25,9 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
-}
+};
 </script>
 
 <style>
@@ -58,12 +47,12 @@ export default {
 }
 
 .level {
-  color: #9199A1;
+  color: #9199a1;
   margin-bottom: 8px;
 }
 
 .price {
-  color: #F01414;
+  color: #f01414;
 }
 
 .footer-spring {

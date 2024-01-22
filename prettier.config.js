@@ -9,5 +9,5 @@ module.exports = {
   bracketSpacing: true,
   bracketSameLine: false,
   // 重点是这一个要配置为auto
-  endOfLine: 'auto'
+  endOfLine: 'auto',
 };

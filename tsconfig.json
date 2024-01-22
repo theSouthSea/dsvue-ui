@@ -18,8 +18,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noImplicitAny": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "typeRoots": ["src/types", "element-plus/global"],
+    "types": [],
+    "paths": {
+      "@/*": ["src/*"],
+    },
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "examples/**/*.vue", "./.eslintrc.js"],
+  "references": [{ "path": "./tsconfig.node.json" }],
 }
