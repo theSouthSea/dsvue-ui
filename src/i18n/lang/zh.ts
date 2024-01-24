@@ -1,4 +1,5 @@
 export default {
+  test: '世界你好!',
   login: {
     title: '用户登录',
     loginBtn: '登录',

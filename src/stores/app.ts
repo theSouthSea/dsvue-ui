@@ -2,7 +2,7 @@
 import { defineStore } from 'pinia';
 
 import { LANG } from '@/constant';
-import i18n from '@/i18n';
+import i18n, { loadLocaleMessages, setI18nLanguage } from '@/i18n';
 interface State {
   language: Language;
 }
@@ -19,10 +19,16 @@ export const useApp = defineStore('app', {
   //   },
   // },
   actions: {
-    setLanguage(lang: Language) {
+    async setLanguage(lang: Language) {
       // 设置缓存
       localStorage.setItem(LANG, lang);
-      i18n.global.locale.value = lang;
+      // i18n.global.locale.value = lang;
+      // i18n.locale.value = lang;
+      // await loadLocaleMessages(i18n, lang);
+      if (!i18n.global.availableLocales.includes(lang)) {
+        await loadLocaleMessages(i18n, lang);
+      }
+      setI18nLanguage(i18n, lang);
       // 修改状态
       this.language = lang;
     },

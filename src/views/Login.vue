@@ -2,7 +2,7 @@
   <div class="login-container">
     <el-form class="login-form" :model="loginForm" :rules="loginRules" ref="loginFromRef">
       <div class="title-container">
-        <h3 class="title">{{ $t('msg.login.title') }}</h3>
+        <h3 class="title">{{ $t('login.title') }}</h3>
         <lang-select class="lang-select"></lang-select>
       </div>
       <el-form-item prop="username">
@@ -18,8 +18,8 @@
         />
       </el-form-item>
 
-      <el-button type="primary" class="submit">{{ $t('msg.login.loginBtn') }}</el-button>
-      <div class="tips" v-html="$t('msg.login.desc')"></div>
+      <el-button type="primary" class="submit">{{ $t('login.loginBtn') }}</el-button>
+      <div class="tips" v-html="$t('login.desc')"></div>
     </el-form>
   </div>
 </template>
@@ -42,7 +42,7 @@ const loginRules = ref({
     {
       required: true,
       trigger: 'blur',
-      message: i18n.t('msg.login.usernameRule'),
+      message: i18n.t('login.usernameRule'),
     },
   ],
   password: [

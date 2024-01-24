@@ -1,4 +1,5 @@
 export default {
+  test: 'hello world',
   login: {
     title: 'User Login',
     loginBtn: 'Login',

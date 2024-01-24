@@ -11,8 +11,8 @@ const locale = useI18n().locale.value === 'zh' ? zhCn : en;
 <template>
   <el-config-provider :locale="locale">
     <language-select />
-    <h1>{{ $t('msg.hello') }}</h1>
-    <h2>{{ $t('msg.test') }}</h2>
+    <h1>{{ $t('hello') }}</h1>
+    <h2>{{ $t('test') }}</h2>
     <!-- <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a> -->
