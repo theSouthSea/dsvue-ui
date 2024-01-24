@@ -1,9 +1,12 @@
 <script setup lang="ts">
 // import HelloWorld from './components/HelloWorld.vue';
+import LanguageSelect from '@/components/config/LanguageSelect.vue';
 </script>
 
 <template>
   <div>
+    <language-select />
+    <h1>{{ $t('msg.hello') }}</h1>
     <h2>{{ $t('msg.test') }}</h2>
     <!-- <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
