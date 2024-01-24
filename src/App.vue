@@ -1,10 +1,15 @@
 <script setup lang="ts">
 // import HelloWorld from './components/HelloWorld.vue';
+import en from 'element-plus/es/locale/lang/en';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import { useI18n } from 'vue-i18n';
+
 import LanguageSelect from '@/components/config/LanguageSelect.vue';
+const locale = useI18n().locale.value === 'zh' ? zhCn : en;
 </script>
 
 <template>
-  <div>
+  <el-config-provider :locale="locale">
     <language-select />
     <h1>{{ $t('msg.hello') }}</h1>
     <h2>{{ $t('msg.test') }}</h2>
@@ -14,9 +19,9 @@ import LanguageSelect from '@/components/config/LanguageSelect.vue';
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-  </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <router-view></router-view>
+    <!-- <HelloWorld msg="Vite + Vue" /> -->
+    <router-view></router-view>
+  </el-config-provider>
 </template>
 
 <style scoped>

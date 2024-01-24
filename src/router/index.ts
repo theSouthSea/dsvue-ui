@@ -14,6 +14,7 @@ const router = createRouter({
     { path: '/vmodelThory', component: () => import('@/views/VmodelThoery.vue') },
     { path: '/todoreact', component: () => import('@/views/TodoReact.vue') },
     { path: '/todo', component: () => import('@/views/Todo.vue') },
+    { path: '/login', component: () => import('@/views/Login.vue') },
   ],
 });
 

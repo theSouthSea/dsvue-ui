@@ -8,6 +8,7 @@ import { createApp } from 'vue';
 // import { createI18n } from 'vue-i18n';
 import i18n from '@/i18n';
 
+// import { useApp } from '@/stores/app';
 import App from './App.vue';
 import router from './router';
 // const obj = {
@@ -26,8 +27,12 @@ import router from './router';
 // });
 const app = createApp(App);
 const pinia = createPinia();
-app.use(ElementPlus);
-app.use(i18n);
+// const appConfig = useApp();
 app.use(pinia);
+app.use(i18n);
 app.use(router);
+app.use(ElementPlus);
+// app.use(ElementPlus, {
+//   locale: appConfig.language === 'en' ? en : zhCn,
+// });
 app.mount('#app');
