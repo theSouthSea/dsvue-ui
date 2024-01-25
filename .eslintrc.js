@@ -25,6 +25,18 @@ module.exports = {
       files: ['*.vue'],
       rules: { 'no-undef': 'off' },
     },
+    {
+      // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching testing files!
+      // files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      files: ['**/?(*.)+(test).ts?(x)'],
+      extends: ['plugin:testing-library/vue'],
+      rules: {
+        'testing-library/await-async-queries': 'error',
+        'testing-library/no-await-sync-queries': 'error',
+        'testing-library/no-debugging-utils': 'warn',
+        'testing-library/no-dom-import': 'off',
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -39,16 +51,12 @@ module.exports = {
     'vue',
     'simple-import-sort',
     'eslint-plugin-node',
-    'testing-library',
+    // 'testing-library',
   ],
   rules: {
     '@typescript-eslint/no-var-requires': 0,
     'vue/multi-word-component-names': 0,
     'simple-import-sort/imports': 'error',
     'node/handle-callback-err': ['error', '^(e|err|error)$'],
-    'testing-library/await-async-queries': 'error',
-    'testing-library/no-await-sync-queries': 'error',
-    'testing-library/no-debugging-utils': 'warn',
-    'testing-library/no-dom-import': 'off',
   },
 };
