@@ -26,7 +26,8 @@
     "deploy": "bash deploy.sh",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "lint-staged": {
     "components/**/*": "prettier --write --ignore-unknown",
@@ -63,6 +64,7 @@
     "@vuepress/plugin-register-components": "2.0.0-rc.0",
     "@vuepress/utils": "2.0.0-rc.0",
     "clean-webpack-plugin": "^4.0.0",
+    "conventional-changelog-cli": "^4.1.0",
     "del": "^7.1.0",
     "dotenv": "^16.4.1",
     "eslint": "^8.56.0",
