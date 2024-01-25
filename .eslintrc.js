@@ -34,11 +34,21 @@ module.exports = {
     tsconfigRootDir: '.', // tsconfig.json所在的根目录，默认是当前工作区
     extraFileExtensions: ['.vue'], // 如果需要处理Vue单文件组件中的TS代码
   },
-  plugins: ['@typescript-eslint', 'vue', 'simple-import-sort', 'eslint-plugin-node'],
+  plugins: [
+    '@typescript-eslint',
+    'vue',
+    'simple-import-sort',
+    'eslint-plugin-node',
+    'testing-library',
+  ],
   rules: {
     '@typescript-eslint/no-var-requires': 0,
     'vue/multi-word-component-names': 0,
     'simple-import-sort/imports': 'error',
     'node/handle-callback-err': ['error', '^(e|err|error)$'],
+    'testing-library/await-async-queries': 'error',
+    'testing-library/no-await-sync-queries': 'error',
+    'testing-library/no-debugging-utils': 'warn',
+    'testing-library/no-dom-import': 'off',
   },
 };

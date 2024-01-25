@@ -21,12 +21,19 @@
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
-    "typeRoots": ["src/types", "element-plus/global"],
-    "types": [],
+    "typeRoots": ["node_modules", "src/types", "element-plus/global"],
+    "types": ["vitest/globals"],
     "paths": {
       "@/*": ["src/*"],
     },
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "examples/**/*.vue", "./.eslintrc.js"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "examples/**/*.vue",
+    "./.eslintrc.js",
+    "vite.config.ts",
+  ],
   "references": [{ "path": "./tsconfig.node.json" }],
 }

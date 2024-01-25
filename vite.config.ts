@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 // import path from 'node:path';
 import { fileURLToPath, URL } from 'node:url';
 
@@ -30,6 +31,13 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+  test: {
+    // 启用类似 jest 的全局测试 API
+    globals: true,
+    // 使用 happy-dom 模拟 DOM
+    // 这需要你安装 happy-dom 作为对等依赖（peer dependency）
+    environment: 'happy-dom',
   },
   // 原文链接：https://blog.csdn.net/summer_dou/article/details/123922964
   build: {
