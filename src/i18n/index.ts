@@ -115,6 +115,7 @@ const i18n = setupI18n({
   //   [getStoredLocale()]: mEnLocale,
   // },
   locale: 'en',
+  fallbackLocale: 'en',
   messages: mEnLocale,
 });
 const curLocale = getStoredLocale();

@@ -37,6 +37,7 @@ const classes = computed(() => ({
   'storybook-button': true,
   'storybook-button--primary': props.primary,
   'storybook-button--secondary': !props.primary,
+  myBtn: true,
   [`storybook-button--${props.size || 'medium'}`]: true,
 }));
 
@@ -48,3 +49,9 @@ const onClick = () => {
   emit('click', 1);
 };
 </script>
+<style scoped lang="scss">
+.myBtn {
+  color: red;
+  border: 1px solid #f00;
+}
+</style>
