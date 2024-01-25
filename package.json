@@ -27,7 +27,8 @@
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version"
   },
   "lint-staged": {
     "components/**/*": "prettier --write --ignore-unknown",
@@ -87,6 +88,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.69.5",
+    "standard-version": "^9.5.0",
     "storybook": "^7.6.10",
     "stylelint-config-prettier": "^9.0.5",
     "typescript": "^5.2.2",

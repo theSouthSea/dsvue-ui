@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-pnpm exec lint-staged
+if [ "$HUSKY_SKIP_HOOKS" = "1" ]; then
+  echo "Skipping prepare-commit-msg hook"
+  exit 0
+fi
+  pnpm exec lint-staged
