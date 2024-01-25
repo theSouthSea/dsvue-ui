@@ -2,15 +2,38 @@
 // import HelloWorld from './components/HelloWorld.vue';
 import en from 'element-plus/es/locale/lang/en';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import LanguageSelect from '@/components/config/LanguageSelect.vue';
 const locale = useI18n().locale.value === 'zh' ? zhCn : en;
+
+// 主题切换
+const isDark = ref(false);
+const chageTheme = (val: boolean) => {
+  if (!val) {
+    document.documentElement.setAttribute('theme', 'light');
+    document.querySelector('html')?.classList.remove('dark');
+    document.querySelector('html')?.classList.add('light');
+  } else {
+    document.documentElement.setAttribute('theme', 'dark');
+    document.querySelector('html')?.classList.remove('light');
+    document.querySelector('html')?.classList.add('dark');
+  }
+  isDark.value = val;
+};
 </script>
 
 <template>
   <el-config-provider :locale="locale">
     <language-select />
+    <el-switch
+      :value="isDark"
+      @change="chageTheme"
+      class="mb-2"
+      active-text="Dark"
+      inactive-text="Light"
+    />
     <h1>{{ $t('hello') }}</h1>
     <h2>{{ $t('test') }}</h2>
     <!-- <a href="https://vitejs.dev" target="_blank">

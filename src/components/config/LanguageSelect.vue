@@ -27,7 +27,7 @@ defineProps({
   effect: {
     type: String,
     default: 'dark',
-    validator: function (value) {
+    validator: function (value: Theme) {
       // 这个值必须匹配下列字符串中的一个
       return ['dark', 'light'].includes(value);
     },
@@ -39,7 +39,8 @@ defineProps({
 
 // 切换语言的方法
 const i18n = useI18n();
-const handleSetLanguage = (lang) => {
+const language = app.language;
+const handleSetLanguage = (lang: Language) => {
   i18n.locale.value = lang;
   // store.commit('setLanguage', lang);
   app.setLanguage(lang);
