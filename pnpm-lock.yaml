@@ -8,6 +8,9 @@ dependencies:
   '@element-plus/icons-vue':
     specifier: ^2.3.1
     version: 2.3.1(vue@3.4.15)
+  '@iconify-json/system-uicons':
+    specifier: ^1.1.12
+    version: 1.1.12
   '@vuepress/client':
     specifier: 2.0.0-rc.0
     version: 2.0.0-rc.0(typescript@5.3.3)
@@ -43,9 +46,18 @@ devDependencies:
   '@commitlint/config-angular':
     specifier: ^18.4.4
     version: 18.4.4
+  '@iconify-json/ic':
+    specifier: ^1.1.17
+    version: 1.1.17
+  '@iconify-json/mdi':
+    specifier: ^1.1.64
+    version: 1.1.64
   '@iconify-json/mdi-light':
     specifier: ^1.1.10
     version: 1.1.10
+  '@iconify-json/mi':
+    specifier: ^1.1.8
+    version: 1.1.8
   '@storybook/addon-essentials':
     specifier: ^7.6.10
     version: 7.6.10(react-dom@18.2.0)(react@18.2.0)
@@ -181,6 +193,9 @@ devDependencies:
   unplugin-icons:
     specifier: ^0.18.2
     version: 0.18.2(@vue/compiler-sfc@3.4.15)
+  unplugin-vue-components:
+    specifier: ^0.26.0
+    version: 0.26.0(vue@3.4.15)
   vite:
     specifier: ^5.0.0
     version: 5.0.12(@types/node@20.11.5)(sass@1.70.0)
@@ -2202,15 +2217,38 @@ packages:
     engines: {node: '>=10.13.0'}
     dev: true
 
+  /@iconify-json/ic@1.1.17:
+    resolution: {integrity: sha512-EvAjZzVESmN36zlyefylePUNaU2BQ3eRKVZ6KQSQ2bG01ppoZaiFZRri74VTyvp5Mlv2yn68ux1fgCoT+etGmA==, tarball: https://registry.npmmirror.com/@iconify-json/ic/-/ic-1.1.17.tgz}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
   /@iconify-json/mdi-light@1.1.10:
     resolution: {integrity: sha512-zs1/O6JV/IK0sTMgrc8EgeVvm9QzY4WgsIWc2c4IMgj3k9q79TXNDI6E6oDLVN3xU4B5THiM3Us3L7+dMUZqtg==, tarball: https://registry.npmmirror.com/@iconify-json/mdi-light/-/mdi-light-1.1.10.tgz}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
 
+  /@iconify-json/mdi@1.1.64:
+    resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==, tarball: https://registry.npmmirror.com/@iconify-json/mdi/-/mdi-1.1.64.tgz}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/mi@1.1.8:
+    resolution: {integrity: sha512-DGoHbf4nkyrHNOAbbNncK1hiiYo/hk/IpdEGZ+eZJpOfWV2VypeaTaQt69pldDgQU+QDyc/GgmO4c0yIwQRfnQ==, tarball: https://registry.npmmirror.com/@iconify-json/mi/-/mi-1.1.8.tgz}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/system-uicons@1.1.12:
+    resolution: {integrity: sha512-W3laFVxVNG4qmS8tsSMt2kQMVK+6i1hZOxZTxSaWQWRnmki4qp9rGHnMfRhxBqZ7SQoIrG3toodooK+y4qoBcQ==, tarball: https://registry.npmmirror.com/@iconify-json/system-uicons/-/system-uicons-1.1.12.tgz}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: false
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==, tarball: https://registry.npmmirror.com/@iconify/types/-/types-2.0.0.tgz}
-    dev: true
 
   /@iconify/utils@2.1.19:
     resolution: {integrity: sha512-pysGqVBjZRZ7JMFpFpQZ3WNK1kEm1l7NwdA2k7kAlmoArJgsw999dSmyzmXgCUJ6GM9LLgyP2PCrDchygWOCGg==, tarball: https://registry.npmmirror.com/@iconify/utils/-/utils-2.1.19.tgz}
@@ -2991,6 +3029,20 @@ packages:
     resolution: {integrity: sha512-fyrgCaedtvMg9NK3en0pnOYJdtfwxUcNolezkNPUsoX57X8oQk+NkqcvzHXD2uKNij6GXmWU9NDru2IWjrO4BQ==, tarball: https://registry.npmmirror.com/@radix-ui/rect/-/rect-1.0.1.tgz}
     dependencies:
       '@babel/runtime': 7.23.8
+    dev: true
+
+  /@rollup/pluginutils@5.1.0:
+    resolution: {integrity: sha512-XTIWOPPcpvyKI6L1NHo0lFlCyznUEyPmPY1mc3KpPVDYulHSTvyeLNVW00QTLIAFNhR3kYnJTQHeGqU4M3n09g==, tarball: https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-5.1.0.tgz}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.5
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
     dev: true
 
   /@rollup/rollup-android-arm-eabi@4.9.5:
@@ -13450,6 +13502,35 @@ packages:
       local-pkg: 0.5.0
       unplugin: 1.6.0
     transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /unplugin-vue-components@0.26.0(vue@3.4.15):
+    resolution: {integrity: sha512-s7IdPDlnOvPamjunVxw8kNgKNK8A5KM1YpK5j/p97jEKTjlPNrA0nZBiSfAKKlK1gWZuyWXlKL5dk3EDw874LQ==, tarball: https://registry.npmmirror.com/unplugin-vue-components/-/unplugin-vue-components-0.26.0.tgz}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/parser': ^7.15.8
+      '@nuxt/kit': ^3.2.2
+      vue: 2 || 3
+    peerDependenciesMeta:
+      '@babel/parser':
+        optional: true
+      '@nuxt/kit':
+        optional: true
+    dependencies:
+      '@antfu/utils': 0.7.7
+      '@rollup/pluginutils': 5.1.0
+      chokidar: 3.5.3
+      debug: 4.3.4
+      fast-glob: 3.3.2
+      local-pkg: 0.4.3
+      magic-string: 0.30.5
+      minimatch: 9.0.3
+      resolve: 1.22.8
+      unplugin: 1.6.0
+      vue: 3.4.15(typescript@5.3.3)
+    transitivePeerDependencies:
+      - rollup
       - supports-color
     dev: true
 

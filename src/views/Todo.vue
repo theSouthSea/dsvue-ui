@@ -12,6 +12,7 @@ console.log('todos=', todos.todos);
   <!-- 直接从 store 中访问 state -->
   <div>
     <h2>待办事项</h2>
+    <icon-midlight-star></icon-midlight-star>
     <InputItem @addTodo="handleAddItem" />
     <TodoList
       :list="todos.todos"

@@ -40,6 +40,11 @@ const chageTheme = (val: boolean) => {
     <IconStar></IconStar>
     <el-icon size="24" color="red"><IconStar></IconStar></el-icon>
     <el-icon size="24" color="red"><IconMenu></IconMenu></el-icon>
+    <IconMdilightStar></IconMdilightStar>
+    <icon-mdilight-star></icon-mdilight-star>
+    <icon-ali-wifi></icon-ali-wifi>
+    <icon-ali-sale></icon-ali-sale>
+    <icon-ali-others></icon-ali-others>
     <h1>{{ $t('hello') }}</h1>
     <h2>{{ $t('test') }}</h2>
     <!-- <a href="https://vitejs.dev" target="_blank">

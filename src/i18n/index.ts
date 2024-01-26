@@ -116,10 +116,13 @@ const i18n = setupI18n({
   // },
   locale: 'en',
   fallbackLocale: 'en',
-  messages: mEnLocale,
+  messages: {
+    en: mEnLocale,
+  },
 });
 const curLocale = getStoredLocale();
 console.log('i18n.global.availableLocales', i18n.global.availableLocales);
+console.log('curLocale', curLocale);
 if (!i18n.global.availableLocales.includes(curLocale)) {
   await loadLocaleMessages(i18n, curLocale);
 }

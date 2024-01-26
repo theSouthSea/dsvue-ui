@@ -16,6 +16,7 @@ const router = createRouter({
     { path: '/todoreact', component: () => import('@/views/TodoReact.vue') },
     { path: '/todo', component: () => import('@/views/Todo.vue') },
     { path: '/login', component: () => import('@/views/Login.vue') },
+    { path: '/iconpreview', component: () => import('@/views/IconPreview.vue') },
   ],
 });
 // router.beforeEach(async (to, from, next) => {

@@ -5,7 +5,11 @@ import { fileURLToPath, URL } from 'node:url';
 import vue from '@vitejs/plugin-vue';
 // 引入loader
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
+// 引入 Icon自动引入解析器
+import IconsResolver from 'unplugin-icons/resolver';
 import Icons from 'unplugin-icons/vite';
+// 引入自动引入插件
+import Components from 'unplugin-vue-components/vite';
 import { defineConfig } from 'vite';
 
 // const __filename = fileURLToPath(import.meta.url);
@@ -31,6 +35,24 @@ makeList('components/lib', list);
 export default defineConfig({
   plugins: [
     vue(),
+    // 使用自动引入插件
+    Components({
+      // 配置解析器
+      resolvers: [
+        // Icon自动引入解析器
+        IconsResolver({
+          // 自动引入的Icon组件统一前缀，默认为 i，设置false为不需要前缀
+          prefix: 'icon',
+          // 当图标集名字过长时，可使用集合别名
+          alias: {
+            system: 'system-uicons',
+            mdilight: 'mdi-light',
+          },
+          // 标识自定义图标集
+          customCollections: ['ali'],
+        }),
+      ],
+    }),
     Icons({
       compiler: 'vue3',
       // 自动安装
