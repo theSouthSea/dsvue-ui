@@ -1,9 +1,9 @@
 import './style.css';
 import './theme.css';
-import 'element-plus/dist/index.css';
+// import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css'; //这句是暗黑模式切换
 
-import ElementPlus from 'element-plus';
+// import ElementPlus from 'element-plus';
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 
@@ -33,7 +33,7 @@ const pinia = createPinia();
 app.use(pinia);
 app.use(i18n);
 app.use(router);
-app.use(ElementPlus);
+// app.use(ElementPlus);
 // app.use(ElementPlus, {
 //   locale: appConfig.language === 'en' ? en : zhCn,
 // });

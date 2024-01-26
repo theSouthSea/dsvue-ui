@@ -8,6 +8,8 @@ import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 // 引入 Icon自动引入解析器
 import IconsResolver from 'unplugin-icons/resolver';
 import Icons from 'unplugin-icons/vite';
+// 引入 ElementPlus 自动引入解析器
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 // 引入自动引入插件
 import Components from 'unplugin-vue-components/vite';
 import { defineConfig } from 'vite';
@@ -51,6 +53,8 @@ export default defineConfig({
           // 标识自定义图标集
           customCollections: ['ali'],
         }),
+        // 使用 ElementPlus 自动引入解析器
+        ElementPlusResolver(),
       ],
     }),
     Icons({
