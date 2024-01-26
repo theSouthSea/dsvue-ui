@@ -6,6 +6,9 @@ import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import LanguageSelect from '@/components/config/LanguageSelect.vue';
+// 自定义图标
+import IconMenu from '~icons/ali/菜单';
+import IconStar from '~icons/mdi-light/star';
 const locale = useI18n().locale.value === 'zh' ? zhCn : en;
 
 // 主题切换
@@ -34,6 +37,9 @@ const chageTheme = (val: boolean) => {
       active-text="Dark"
       inactive-text="Light"
     />
+    <IconStar></IconStar>
+    <el-icon size="24" color="red"><IconStar></IconStar></el-icon>
+    <el-icon size="24" color="red"><IconMenu></IconMenu></el-icon>
     <h1>{{ $t('hello') }}</h1>
     <h2>{{ $t('test') }}</h2>
     <!-- <a href="https://vitejs.dev" target="_blank">

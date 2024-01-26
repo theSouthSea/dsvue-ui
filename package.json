@@ -53,6 +53,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-angular": "^18.4.4",
+    "@iconify-json/mdi-light": "^1.1.10",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
@@ -97,6 +98,7 @@
     "storybook": "^7.6.10",
     "stylelint-config-prettier": "^9.0.5",
     "typescript": "^5.2.2",
+    "unplugin-icons": "^0.18.2",
     "vite": "^5.0.0",
     "vitest": "^1.2.1",
     "vue-loader": "^17.3.1",

@@ -3,6 +3,9 @@
 import { fileURLToPath, URL } from 'node:url';
 
 import vue from '@vitejs/plugin-vue';
+// 引入loader
+import { FileSystemIconLoader } from 'unplugin-icons/loaders';
+import Icons from 'unplugin-icons/vite';
 import { defineConfig } from 'vite';
 
 // const __filename = fileURLToPath(import.meta.url);
@@ -26,7 +29,23 @@ async function makeList(dirPath, list) {
 makeList('components/lib', list);
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    Icons({
+      compiler: 'vue3',
+      // 自动安装
+      autoInstall: true,
+      // 自定义图标加载
+      customCollections: {
+        // home图标集
+        // 给svg文件设置fill="currentColor"属性，使图标的颜色具有适应性
+        ali: FileSystemIconLoader('src/assets/svg/ali', (svg) =>
+          svg.replace(/^<svg /, '<svg fill="currentColor" ')
+        ),
+        // about图标集
+      },
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
