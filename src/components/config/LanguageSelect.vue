@@ -1,14 +1,16 @@
 <template>
   <el-dropdown trigger="click" class="international" @command="handleSetLanguage">
     <div>
-      <el-tooltip content="国际化" :effect="effect">
-        <el-button>切换</el-button>
+      <el-tooltip content="国际化语言切换" :effect="effect">
+        <el-button>{{ app.language === 'zh' ? '中文' : 'English' }}</el-button>
       </el-tooltip>
     </div>
     <template #dropdown>
       <el-dropdown-menu>
-        <el-dropdown-item :disabled="language === 'zh'" command="zh"> 中文 </el-dropdown-item>
-        <el-dropdown-item :disabled="language === 'en'" command="en"> English </el-dropdown-item>
+        <el-dropdown-item :disabled="app.language === 'zh'" command="zh"> 中文 </el-dropdown-item>
+        <el-dropdown-item :disabled="app.language === 'en'" command="en">
+          English
+        </el-dropdown-item>
       </el-dropdown-menu>
     </template>
   </el-dropdown>
@@ -40,10 +42,14 @@ defineProps({
 // 切换语言的方法
 const i18n = useI18n();
 const language = app.language;
+console.log('language-i18n', i18n);
+console.log('language-app', language);
 const handleSetLanguage = (lang: Language) => {
   i18n.locale.value = lang;
+  // i18n.global.locale.value = lang;
   // store.commit('setLanguage', lang);
   app.setLanguage(lang);
+  console.log('handleSetLanguage-lang', lang);
   ElMessage.success(`语言成功切换为${lang === 'zh' ? '中文' : '英文'}`);
 };
 </script>

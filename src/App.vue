@@ -2,7 +2,7 @@
 // import HelloWorld from './components/HelloWorld.vue';
 import en from 'element-plus/es/locale/lang/en';
 import zhCn from 'element-plus/es/locale/lang/zh-cn';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import ButtonComp from '@/components/base/icon/ButtonComp.vue';
@@ -13,7 +13,10 @@ import LanguageSelect from '@/components/config/LanguageSelect.vue';
 // 自定义图标
 import IconMenu from '~icons/ali/菜单';
 import IconStar from '~icons/mdi-light/star';
-const locale = useI18n().locale.value === 'zh' ? zhCn : en;
+const i18n = useI18n();
+// console.log('app-i18n', i18n);
+// const locale = i18n.locale.value === 'zh' ? zhCn : en;
+const locale = computed(() => (i18n.locale.value === 'zh' ? zhCn : en));
 
 // 主题切换
 const isDark = ref(false);

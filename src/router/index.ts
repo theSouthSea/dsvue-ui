@@ -37,6 +37,8 @@ const router = createRouter({
         { path: '', component: () => import('@/views/comp/ClamUsage.vue') },
         { path: 'jsxdemo', component: () => import('@/views/comp/JsxDemo.tsx') },
         { path: 'useskeleton', component: () => import('@/views/comp/UseSkeleton.vue') },
+        { path: 'list', component: () => import('@/views/comp/List.vue') },
+        { path: 'listusetable', component: () => import('@/views/comp/ListUseTable.vue') },
       ],
     },
     {

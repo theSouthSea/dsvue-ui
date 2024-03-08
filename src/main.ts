@@ -40,6 +40,13 @@ app.use(i18n);
 app.use(router);
 // app.component('RegisterComp', RegisterComp);
 app.use(registerComp);
+// 设置 Element Plus 的全局语言
+// app.use(ElConfigProvider, {
+//   // locale: zhCn,
+//   // 可选：如果你也在项目中使用了 vue-i18n，可以将 Element Plus 的语言与之同步
+//   // 使用 i18n.global.locale 进行同步
+//   // locale: i18n.global.locale,
+// });
 // app.use(_RegisterComp);
 // app.use(ElementPlus);
 // app.use(ElementPlus, {
