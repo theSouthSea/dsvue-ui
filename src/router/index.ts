@@ -36,6 +36,7 @@ const router = createRouter({
       children: [
         { path: '', component: () => import('@/views/comp/ClamUsage.vue') },
         { path: 'jsxdemo', component: () => import('@/views/comp/JsxDemo.tsx') },
+        { path: 'useskeleton', component: () => import('@/views/comp/UseSkeleton.vue') },
       ],
     },
     {

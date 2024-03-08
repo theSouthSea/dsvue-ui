@@ -56,6 +56,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-var-requires': 0,
     'vue/multi-word-component-names': 0,
+    '@typescript-eslint/no-explicit-any': 0,
     'simple-import-sort/imports': 'error',
     'node/handle-callback-err': ['error', '^(e|err|error)$'],
   },

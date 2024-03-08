@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Loading } from '@element-plus/icons-vue';
 import { computed, defineProps } from 'vue';
 
 /* status:'loading','error','success','empty' */
@@ -81,7 +82,8 @@ const placeholderData = computed(() => {
     ]"
   >
     <div v-if="!placeholderData && viewStatus === 'loading'" class="loading-center">
-      <el-icon style="font-size: 40px; color: #2a6de5"><Loading /></el-icon>
+      <!-- <el-icon style="font-size: 40px; color: #f00"><Loading /></el-icon> -->
+      <el-icon :size="40" color="blue" class="is-loading"><Loading /></el-icon>
     </div>
     <slot
       v-else
