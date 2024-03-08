@@ -13,7 +13,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "preserve",
-
+    // "jsxImportSource": "vue",
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -32,6 +32,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "examples/**/*.vue",
+    "components/**/*.vue",
+    "components/**/*.js",
     "./.eslintrc.js",
     "vite.config.ts",
   ],

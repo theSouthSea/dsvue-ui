@@ -5,6 +5,10 @@ import zhCn from 'element-plus/es/locale/lang/zh-cn';
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+import ButtonComp from '@/components/base/icon/ButtonComp.vue';
+import ButtonCompExtends from '@/components/base/icon/ButtonCompExtends.vue';
+import IconBase from '@/components/base/icon/IconBase.vue';
+import IconComp from '@/components/base/icon/IconComp.vue';
 import LanguageSelect from '@/components/config/LanguageSelect.vue';
 // 自定义图标
 import IconMenu from '~icons/ali/菜单';
@@ -45,6 +49,11 @@ const chageTheme = (val: boolean) => {
     <icon-ali-wifi></icon-ali-wifi>
     <icon-ali-sale></icon-ali-sale>
     <icon-ali-others></icon-ali-others>
+    <RegisterComp></RegisterComp>
+    <IconBase></IconBase>
+    <IconComp iconName="icon-erweima"></IconComp>
+    <ButtonComp name="新增" iconName="icon-gouwuchetianjia"></ButtonComp>
+    <ButtonCompExtends name="新增商品" iconName="icon-gouwuchetianjia"></ButtonCompExtends>
     <h1>{{ $t('hello') }}</h1>
     <h2>{{ $t('test') }}</h2>
     <!-- <a href="https://vitejs.dev" target="_blank">

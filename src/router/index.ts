@@ -17,6 +17,32 @@ const router = createRouter({
     { path: '/todo', component: () => import('@/views/Todo.vue') },
     { path: '/login', component: () => import('@/views/Login.vue') },
     { path: '/iconpreview', component: () => import('@/views/IconPreview.vue') },
+    { path: '/iconpreview', component: () => import('@/views/IconPreview.vue') },
+    {
+      path: '/hooks',
+      component: () => import('@/views/hooks/HooksHome.vue'),
+      children: [
+        { path: '', component: () => import('@/views/hooks/HooksList.vue') },
+        { path: 'HooksOne', component: () => import('@/views/hooks/HooksOne.vue') },
+        { path: 'HooksTwo', component: () => import('@/views/hooks/HooksTwo.vue') },
+        { path: 'HooksThree', component: () => import('@/views/hooks/HooksThree.vue') },
+        { path: 'HooksFour', component: () => import('@/views/hooks/HooksFour.vue') },
+        { path: 'HooksFive', component: () => import('@/views/hooks/HooksFive.vue') },
+      ],
+    },
+    {
+      path: '/comp',
+      component: () => import('@/views/comp/CompHome.vue'),
+      children: [
+        { path: '', component: () => import('@/views/comp/ClamUsage.vue') },
+        { path: 'jsxdemo', component: () => import('@/views/comp/JsxDemo.tsx') },
+      ],
+    },
+    {
+      path: '/renderFun',
+      component: () => import('@/views/comp/CompHome.vue'),
+      children: [{ path: '', component: () => import('@/views/renderFun/HTwo.tsx') }],
+    },
   ],
 });
 // router.beforeEach(async (to, from, next) => {

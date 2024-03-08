@@ -1,7 +1,6 @@
-import Demo from './demo';
-import Card from './card';
-
 import { version } from '../../package.json';
+import Card from './card';
+import Demo from './demo';
 
 const components = {
   Demo,
@@ -10,9 +9,9 @@ const components = {
 
 const install = function (Vue) {
   if (install.installed) return;
-  Object.keys(components).forEach(key => {
+  Object.keys(components).forEach((key) => {
     Vue.component(components[key].name, components[key]);
-  })
+  });
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -22,7 +21,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 const API = {
   version,
   install,
-  ...components
+  ...components,
 };
 
 export default API;

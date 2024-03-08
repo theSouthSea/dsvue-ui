@@ -29,7 +29,8 @@
     "build-storybook": "storybook build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "release": "cross-env HUSKY_SKIP_HOOKS=1 standard-version",
-    "test": "vitest"
+    "test": "vitest",
+    "build:lib": "vite build --config ./build/lib.config.js"
   },
   "lint-staged": {
     "components/**/*": "prettier --write --ignore-unknown",
@@ -42,16 +43,21 @@
     "@element-plus/icons-vue": "^2.3.1",
     "@iconify-json/system-uicons": "^1.1.12",
     "@vuepress/client": "2.0.0-rc.0",
+    "axios": "^1.6.7",
+    "bdjf_http": "^1.1.5",
     "dsvue-ui": "^0.2.1",
     "element-plus": "^2.5.2",
     "express": "^4.18.2",
     "pinia": "^2.1.7",
+    "qs": "^6.12.0",
+    "sketion-http": "^0.1.33",
     "vue": "^3.3.8",
     "vue-i18n": "9",
     "vue-router": "^4.2.5",
     "vuepress": "2.0.0-rc.0"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-angular": "^18.4.4",
     "@iconify-json/ic": "^1.1.17",
@@ -69,6 +75,7 @@
     "@typescript-eslint/eslint-plugin": "^6.19.0",
     "@typescript-eslint/parser": "^6.19.0",
     "@vitejs/plugin-vue": "^4.5.0",
+    "@vue/babel-plugin-jsx": "^1.2.1",
     "@vuepress/plugin-register-components": "2.0.0-rc.0",
     "@vuepress/utils": "2.0.0-rc.0",
     "clean-webpack-plugin": "^4.0.0",

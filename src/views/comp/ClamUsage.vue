@@ -1,0 +1,55 @@
+<template>
+  <div class="home col">
+    <clam-view :res="response" v-slot="{ data }" :empty-data="emptyData">
+      <p>
+        <span>{{ data.name }}</span>
+      </p>
+      <p>Home</p>
+      <router-link to="/about">{{ data.route }}</router-link>
+    </clam-view>
+  </div>
+</template>
+<script lang="ts">
+import { ResponseConstructor, ResponseImpl } from 'bdjf_http';
+import { defineComponent, onMounted, reactive, toRefs } from 'vue';
+
+import ClamView from '@/libs/skeleton/ClamView';
+
+export default defineComponent({
+  name: 'Home',
+  components: {
+    ClamView,
+  },
+  setup() {
+    const state = reactive({
+      response: new ResponseImpl({} as ResponseConstructor<any>).setLoading(),
+    });
+
+    onMounted(() => {
+      setTimeout(() => {
+        state.response = new ResponseImpl({
+          code: 0,
+          msg: '',
+          data: {
+            name: 'Home',
+            route: 'About',
+          },
+        });
+      }, 2500);
+    });
+
+    const emptyData = {
+      name: '站位文字',
+      route: '站位文字',
+    };
+
+    return {
+      ...toRefs(state),
+      emptyData,
+    };
+  },
+});
+</script>
+
+<style scoped></style>
+../../libs/skeleton/ClamView

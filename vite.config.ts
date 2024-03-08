@@ -3,6 +3,7 @@
 import { fileURLToPath, URL } from 'node:url';
 
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 // 引入loader
 import { FileSystemIconLoader } from 'unplugin-icons/loaders';
 // 引入 Icon自动引入解析器
@@ -37,6 +38,7 @@ makeList('components/lib', list);
 export default defineConfig({
   plugins: [
     vue(),
+    vueJsx(),
     // 使用自动引入插件
     Components({
       // 配置解析器

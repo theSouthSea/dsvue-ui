@@ -7,12 +7,17 @@ import 'element-plus/theme-chalk/dark/css-vars.css'; //这句是暗黑模式切�
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 
+// 第一种,全局注册组件
+// import RegisterComp from '@/components/demo/registerComp/RegisterComp.vue';
+// 第二种,全局注册组件
+import registerComp from '@/components/demo/registerComp';
 // import { createI18n } from 'vue-i18n';
 import i18n from '@/i18n';
 
 // import { useApp } from '@/stores/app';
 import App from './App.vue';
 import router from './router';
+
 // const obj = {
 //   abc: 'abc',
 //   bb: 123,
@@ -33,6 +38,9 @@ const pinia = createPinia();
 app.use(pinia);
 app.use(i18n);
 app.use(router);
+// app.component('RegisterComp', RegisterComp);
+app.use(registerComp);
+// app.use(_RegisterComp);
 // app.use(ElementPlus);
 // app.use(ElementPlus, {
 //   locale: appConfig.language === 'en' ? en : zhCn,

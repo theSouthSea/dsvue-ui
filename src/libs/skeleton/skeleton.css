@@ -1,0 +1,69 @@
+
+/**
+正常状态下的 样式，
+设置 transition 来让过渡平滑
+*/
+.skeleton-view-default-view span,
+.skeleton-view-default-view a,
+.skeleton-view-default-view img
+{
+    transition: all .7s ease;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+/**
+加载时的样式，首先设置不监听任何事件，省的用户乱点
+然后给 span、a、img标签设置可以动的背景，字体颜色设成透明，
+就形成 “骨架” 了
+*/
+.skeleton-view-empty-view {
+    pointer-events: none;
+}
+.skeleton-view-empty-view span,
+.skeleton-view-empty-view a {
+    color: rgba(0, 0, 0, 0) !important;
+    border-radius: 2px;
+    background: linear-gradient(
+            -45deg,
+            #F5F5F5 0%,
+            #DCDCDC 25%,
+            #F5F5F5 50%,
+            #DCDCDC 75%,
+            #F5F5F5 100%
+    );
+    animation: gradientBG 4s ease infinite;
+    background-size: 400% 400%;
+    background-color:#DCDCDC;
+    transition: all 1s ease;
+}
+
+.skeleton-view-empty-view img {
+    /* 这里是一个透明的小图片 */
+    content: url(../../assets/img/no_url.png);
+    border-radius: 2px;
+    background: linear-gradient(
+            -45deg,
+            #F5F5F5 0%,
+            #DCDCDC 25%,
+            #F5F5F5 50%,
+            #DCDCDC 75%,
+            #F5F5F5 100%
+    );
+    animation: gradientBG 4s ease infinite;
+    background-size: 400% 400%;
+    background-color:#DCDCDC;
+    transition: all 1s ease;
+}
+@keyframes gradientBG {
+    0% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+
+}
